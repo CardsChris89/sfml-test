@@ -9,17 +9,17 @@ examples include:
 
 template <typename T, typename W>
 Vector2<T> operator/(Vector2<T>& l, W r) {
-    return {l.x / static_cast<double>(r), l.y / static_cast<double>(r)};
+    return {l.x / r, l.y / r};
 }
 
 template <typename T, typename W>
 Vector2<T> operator/(Vector2<T>&& l, W r) {
-    return {l.x / static_cast<double>(r), l.y / static_cast<double>(r)};
+    return {l.x / r, l.y / r};
 }
 
-// For lvalue references (Vector2<T>&)
+
 template <typename T, typename W>
 void operator/=(Vector2<T>& l, W r) {
-    l.x = (T) (l.x/static_cast<double>(r));
-    l.y = (T) (l.y/static_cast<double>(r));
+    l.x = static_cast<T>(l.x / r);
+    l.y = static_cast<T>(l.y / r);
 }
