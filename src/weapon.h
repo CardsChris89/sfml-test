@@ -2,8 +2,9 @@
 #define SFMLPROJECT_WEAPON_H
 
 
-class weapon {
-
+class Weapon {
+public:
+    Weapon();
 };
 
 
