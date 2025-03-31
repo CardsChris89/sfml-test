@@ -13,6 +13,10 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(out src/main.cpp
-        src/helpful.cpp)
+        src/helpful.cpp
+        src/player.cpp
+        src/player.h
+        src/weapon.cpp
+        src/weapon.h)
 target_compile_features(out PRIVATE cxx_std_17)
 target_link_libraries(out PRIVATE SFML::Graphics SFML::Audio)
